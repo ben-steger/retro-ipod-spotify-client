@@ -41,6 +41,10 @@ sudo apt-get install x11-xserver-utils -y
 3. Install Dependencies
 
 ```
+git clone https://github.com/ben-steger/retro-ipod-spotify-client.git
+```
+
+```
 pip3 install -r requirements.txt
 ```
 
