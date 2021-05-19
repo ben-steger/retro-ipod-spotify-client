@@ -15,6 +15,7 @@ sudo apt-get upgrade
 2. Install Required Packages.
 
 Installation for python3-pip, raspotify, python3-tk, openbox \
+
 **install.sh:**
 ```
 
