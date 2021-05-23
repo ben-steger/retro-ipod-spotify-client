@@ -186,6 +186,6 @@ Here is the wiring of the hardware, as of revision 1. Note that the pin numbers 
 ![LCD Wiring](./.docs/SpotifyPod_schematicsdisplay-1536x1144.png)
 
 ### Clickwheel Wiring
-![Clickwheel Wiring](./.docs/SpotifyPod_schematicsclickwheel-1536x1242.ong)
+![Clickwheel Wiring](./.docs/SpotifyPod_schematicsclickwheel-1536x1242.png)
 
 
