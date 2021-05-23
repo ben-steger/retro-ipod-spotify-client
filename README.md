@@ -37,6 +37,8 @@ sudo apt-get install lightdm -y
 
 sudo apt-get install x11-xserver-utils -y
 
+sudo apt-get install libopenjp2-7 -y
+
 ```
 3. Install Dependencies
 
