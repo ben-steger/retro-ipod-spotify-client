@@ -190,4 +190,31 @@ Here is the wiring of the hardware, as of revision 1. Note that the pin numbers 
 ### Clickwheel Wiring
 ![Clickwheel Wiring](./.docs/SpotifyPod_schematicsclickwheel-1536x1242.png)
 
+# LCD Display Driver
 
+Add this to /boot/config.txt
+```
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt=240 320 60 1 0 0 0
+hdmi_force_hotplug=1
+```
+
+1. `git clone https://github.com/juj/fbcp-ili9341.git`
+3. `cd fbcp-ili9341`
+4. Change these two lines in st7735r.h:
+```
+#define DISPLAY_NATIVE_WIDTH 320
+#define DISPLAY_NATIVE_HEIGHT 240
+```
+5. In st7735r.cpp add `madctl ^= MADCTL_COLUMN_ADDRESS_ORDER_SWAP;` before this line `SPI_TRANSFER(0x36/*MADCTL: Memory Access Control*/, madctl);`
+6. Comment out this line in config.h: `#define DISPLAY_OUTPUT_LANDSCAPE`
+7. `mkdir build`
+8. `cd build`
+9.
+```
+cmake -DST7789=ON -DGPIO_TFT_DATA_CONTROL=24 -DGPIO_TFT_RESET_PIN=25 -DSPI_BUS_CLOCK_DIVISOR=30 -DSTATISTICS=0 -DDISPLAY_BREAK_ASPECT_RATIO_WHEN_SCALING=ON -DUSE_DMA_TRANSFERS=OFF ..
+```
+6. `make -j`
+7. Test it out: `sudo ./fbcp-ili9341`
+8. Add it to rc.local `sudo nano /etc/rc.local`
