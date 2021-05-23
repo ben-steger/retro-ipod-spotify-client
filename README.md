@@ -179,4 +179,13 @@ DEVICE_TYPE="smartphone"
 
 Here is the wiring of the hardware, as of revision 1. Note that the pin numbers correlate to those referenced in [click.c](./clickwheel/click.c)
 
+### Haptic Wiring Only
 ![Wiring Diagram](./.docs/sPot_schematic.png)
+
+### LCD Wiring
+![LCD Wiring](./.docs/SpotifyPod_schematicsdisplay-1536x1144.png)
+
+### Clickwheel Wiring
+![Clickwheel Wiring](./.docs/SpotifyPod_schematicsclickwheel-1536x1242.ong)
+
+
