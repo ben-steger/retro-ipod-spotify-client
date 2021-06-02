@@ -27,10 +27,10 @@ UDP_PORT = 9090
 
 DIVIDER_HEIGHT = 3
 
-UP_KEY_CODE = 8255233 if platform == "darwin" else 111
-DOWN_KEY_CODE = 8320768 if platform == "darwin" else 116
-LEFT_KEY_CODE = 8124162 if platform == "darwin" else 113
-RIGHT_KEY_CODE = 8189699 if platform == "darwin" else 114
+UP_KEY_CODE = 2113992448 if platform == "darwin" else 111
+DOWN_KEY_CODE = 2097215233 if platform == "darwin" else 116
+LEFT_KEY_CODE = 2063660802 if platform == "darwin" else 113
+RIGHT_KEY_CODE = 2080438019 if platform == "darwin" else 114
 PREV_KEY_CODE = 2818092 if platform == "darwin" else 0
 NEXT_KEY_CODE = 3080238 if platform == "darwin" else 0
 PLAY_KEY_CODE = 3211296 if platform == "darwin" else 0
@@ -578,4 +578,5 @@ def app_main_loop():
 
 app.bind('<KeyPress>', onKeyPress)
 app.after(5, app_main_loop)
+print(platform)
 app.mainloop()
